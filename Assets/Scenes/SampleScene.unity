@@ -330,5 +330,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4041482653016337829, guid: 225777d92e6f1a34b96b6440c8edabdd,
+        type: 3}
+      propertyPath: shotForce
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041482653016337829, guid: 225777d92e6f1a34b96b6440c8edabdd,
+        type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 261757284035390414, guid: bf33790ab3ded6641858b77256ae810c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 225777d92e6f1a34b96b6440c8edabdd, type: 3}

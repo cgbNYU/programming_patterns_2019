@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Chapin Boyer\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Chapin Boyer\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_programming_patterns_2019.-1353544684.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Chapin Boyer\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Programming Patterns Arena.-1669312089.00" t="ExcludeRecursive" />
     <e p="C:\Users\Chapin Boyer\Documents\Unity Projects\programming_patterns_2019" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -13,10 +13,8 @@
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="programming_patterns_2019.sln" t="IncludeFlat" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Programming Patterns Arena.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>
