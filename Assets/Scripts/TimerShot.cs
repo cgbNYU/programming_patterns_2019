@@ -34,6 +34,7 @@ public class TimerShot : MonoBehaviour
 
         if (timer > shotDelay)
         {
+            targetScript.FindTarget();
             shootScript.Shot(targetScript.targetDif);
             timer = 0;
         }

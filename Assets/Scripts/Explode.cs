@@ -39,6 +39,7 @@ public class Explode : MonoBehaviour
         Destroy(GetComponent<Target>());
         Destroy(GetComponent<Follow>());
         Destroy(GetComponent<Movement>());
+        Destroy(GetComponent<Destroy>());
 
         transform.gameObject.tag = "EnemyBullet";
         

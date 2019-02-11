@@ -12,11 +12,14 @@ public class Target : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      //  target = GameObject.FindWithTag("Player");
+        target = GameObject.FindWithTag("Player");
     }
 
     public void FindTarget()
     {
-        targetDif = target.transform.position - transform.position;
+        if (target != null)
+        {
+            targetDif = target.transform.position - transform.position; 
+        }  
     }
 }
