@@ -50,7 +50,8 @@ public class EnemyManager : MonoBehaviour
     private void ChooseEnemyType(GameObject spawnLoc)
     {
         var whichEnemy = (Enemies) Random.Range(0, 2);
-
+        
+        //This should actually be an array than is pulled from with a random range
         if (whichEnemy == Enemies.Exploder)
         {
             GameObject enemy = Instantiate(Exploder, spawnLoc.transform.position, spawnLoc.transform.rotation);
@@ -71,10 +72,12 @@ public class EnemyManager : MonoBehaviour
     //Generate relevant enemies
     private void EnemySpawn(int enemyNum)
     {
+        //Not sure where to add it, but this should have an interval between enemies so it's not immediate death
+        //Maybe they spawn a marker where they are going to spawn before it happens
         Debug.Log("enemyNum = " + enemyNum);
         for (int i = 0; i <= enemyNum; i++)
         {
-            GameObject whichSpawn = spawners[i];
+            GameObject whichSpawn = spawners[i]; //this would be better if it picked randomly and then dropped that spawner from the potential list
             ChooseEnemyType(whichSpawn);
         }
     }
