@@ -91,7 +91,7 @@ public class EnemyManager : MonoBehaviour
 
         if (enemies.Count <= 0)
         {
-            enemies.Clear();
+            enemies.Clear(); //I think this is redundant because enemies gets set again later, but that's probably fine
             NewWave();
         }
     }
