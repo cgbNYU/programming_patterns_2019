@@ -49,7 +49,7 @@ public class EnemyManager : MonoBehaviour
     //Take a random piece of the 10 for each enemy type
     private void ChooseEnemyType(GameObject spawnLoc)
     {
-        var whichEnemy = (Enemies) Random.Range(0, 2);
+        var whichEnemy = (Enemies) Random.Range(0, 3); //int range is exclusive
         
         //This should actually be an array than is pulled from with a random range
         if (whichEnemy == Enemies.Exploder)
