@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 148418061019398046}
   - component: {fileID: 148418061019398044}
   - component: {fileID: 148418061019398047}
-  - component: {fileID: 6673544311965129350}
   - component: {fileID: 2449415021413416051}
+  - component: {fileID: 7506492661288181087}
   m_Layer: 0
   m_Name: Follower
   m_TagString: EnemyBullet
@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148418061019398037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.764057, y: -1.848264, z: -0.061242707}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -123,19 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
---- !u!114 &6673544311965129350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148418061019398037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7677fb8a37f36444a5bccb073b088db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagName: Bullet
 --- !u!58 &2449415021413416051
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -152,3 +139,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7506492661288181087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148418061019398037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dac016f9c29d2444b6ca8c74418f5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: Bullet
