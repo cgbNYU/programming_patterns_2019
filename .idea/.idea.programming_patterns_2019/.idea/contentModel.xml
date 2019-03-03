@@ -22,8 +22,11 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Destroy.cs" t="Include" />
+          <e p="EnemyDestroy.cs" t="Include" />
+          <e p="EnemyManager.cs" t="Include" />
           <e p="Explode.cs" t="Include" />
           <e p="Follow.cs" t="Include" />
+          <e p="Loader.cs" t="Include" />
           <e p="Movement.cs" t="Include" />
           <e p="MovementInput.cs" t="Include" />
           <e p="PlayerScript.cs" t="Include" />
