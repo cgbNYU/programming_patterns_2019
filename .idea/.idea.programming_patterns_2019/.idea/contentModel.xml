@@ -28,9 +28,11 @@
           <e p="Events.cs" t="Include" />
           <e p="Explode.cs" t="Include" />
           <e p="Follow.cs" t="Include" />
+          <e p="HighScoreManager.cs" t="Include" />
           <e p="Loader.cs" t="Include" />
           <e p="Movement.cs" t="Include" />
           <e p="MovementInput.cs" t="Include" />
+          <e p="MultiplierManager.cs" t="Include" />
           <e p="PlayerScript.cs" t="Include" />
           <e p="PlayerVariables.cs" t="Include" />
           <e p="ScoreManager.cs" t="Include" />

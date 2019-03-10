@@ -28,4 +28,15 @@ public class Events : MonoBehaviour
             PointValue = value;
         }
     }
+    
+    //Called when the Score Multiplier changes
+    public class MultiplierChanged : GameEvent
+    {
+        public int NewMultiplier { get; }
+
+        public MultiplierChanged(int newMulti)
+        {
+            NewMultiplier = newMulti;
+        }
+    }
 }
