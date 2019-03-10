@@ -25,6 +25,7 @@
           <e p="EnemyDestroy.cs" t="Include" />
           <e p="EnemyManager.cs" t="Include" />
           <e p="EventManager.cs" t="Include" />
+          <e p="Events.cs" t="Include" />
           <e p="Explode.cs" t="Include" />
           <e p="Follow.cs" t="Include" />
           <e p="Loader.cs" t="Include" />

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Events;
 
 public class Destroy : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Destroy : MonoBehaviour
     {
         if (other.CompareTag(tagName))
         {
+            EventManager.Instance.Fire(new PlayerDied());
             Destroy(gameObject);
         }
     }
