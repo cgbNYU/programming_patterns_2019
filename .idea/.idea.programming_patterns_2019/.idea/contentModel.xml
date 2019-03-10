@@ -33,6 +33,7 @@
           <e p="MovementInput.cs" t="Include" />
           <e p="PlayerScript.cs" t="Include" />
           <e p="PlayerVariables.cs" t="Include" />
+          <e p="ScoreManager.cs" t="Include" />
           <e p="Shoot.cs" t="Include" />
           <e p="ShootInput.cs" t="Include" />
           <e p="Target.cs" t="Include" />
