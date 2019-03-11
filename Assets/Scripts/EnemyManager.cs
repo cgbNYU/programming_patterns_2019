@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
 
+    //Singleton
+    public static EnemyManager instance = null;
     //Inspector variables to determine min and max enemies per wave
     public int enemyMin = 3;
     public int enemyMax = 8;
@@ -29,8 +31,20 @@ public class EnemyManager : MonoBehaviour
     private List<GameObject> enemies;
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        //Singleton code
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+        
+        DontDestroyOnLoad(gameObject);
+        
         NewWave();
     }
 
