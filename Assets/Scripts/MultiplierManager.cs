@@ -17,6 +17,9 @@ public class MultiplierManager : MonoBehaviour
     //Text stuff
     private Text multiText;
     
+    //Multiplier bool
+    private bool waveRunning;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +27,28 @@ public class MultiplierManager : MonoBehaviour
         multiText = GetComponent<Text>();
         multiText.text = "X" + multiplier;
         EventManager.Instance.AddHandler<ScoreChanged>(OnScoreChanged);
+        EventManager.Instance.AddHandler<WaveEnd>(OnWaveEnd);
+        EventManager.Instance.AddHandler<WaveStart>(OnWaveStart);
         EventManager.Instance.AddHandler<PlayerDied>(OnPlayerDied);
+        waveRunning = false;
     }
 
     private void OnDestroy()
     {
         EventManager.Instance.RemoveHandler<ScoreChanged>(OnScoreChanged);
         EventManager.Instance.RemoveHandler<PlayerDied>(OnPlayerDied);
+        EventManager.Instance.RemoveHandler<WaveEnd>(OnWaveEnd);
+        EventManager.Instance.RemoveHandler<WaveStart>(OnWaveStart);
+    }
+
+    private void OnWaveEnd(WaveEnd evt)
+    {
+        waveRunning = false;
+    }
+
+    private void OnWaveStart(WaveStart evt)
+    {
+        waveRunning = true;
     }
 
     private void OnScoreChanged(ScoreChanged evt)
@@ -55,7 +73,10 @@ public class MultiplierManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MultiplierTimeOut();
+        if (waveRunning)
+        {
+            MultiplierTimeOut();
+        }
     }
 
     private void MultiplierTimeOut()

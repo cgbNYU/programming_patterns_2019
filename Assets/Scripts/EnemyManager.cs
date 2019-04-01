@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Events;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -44,7 +45,20 @@ public class EnemyManager : MonoBehaviour
         }
         
         DontDestroyOnLoad(gameObject);
-        
+    }
+
+    private void Start()
+    {
+        EventManager.Instance.AddHandler<WaveStart>(OnWaveStart);
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.Instance.RemoveHandler<WaveStart>(OnWaveStart);
+    }
+
+    private void OnWaveStart(WaveStart evt)
+    {
         NewWave();
     }
 
@@ -106,7 +120,7 @@ public class EnemyManager : MonoBehaviour
         if (enemies.Count <= 0)
         {
             enemies.Clear(); //I think this is redundant because enemies gets set again later, but that's probably fine
-            NewWave();
+            EventManager.Instance.Fire(new Events.WaveEnd());
         }
     }
     

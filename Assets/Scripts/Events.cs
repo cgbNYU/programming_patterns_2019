@@ -39,4 +39,10 @@ public class Events : MonoBehaviour
             NewMultiplier = newMulti;
         }
     }
+    
+    //Called when the wave ends
+    public class WaveEnd : GameEvent {}
+    
+    //Called when the wave starts
+    public class WaveStart : GameEvent {}
 }

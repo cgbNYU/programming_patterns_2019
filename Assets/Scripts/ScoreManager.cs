@@ -6,6 +6,8 @@ using static Events;
 
 //ScoreManager will read enemy destroyed events and update the score accordingly
 //It will also fire a ScoreChanged event to the HighScoreManager and the MultiplierManager
+
+//Managers tend to be pure logic. Separate UI and Manager backend. Send up Events that the UI grabs.
 public class ScoreManager : MonoBehaviour
 {
     private Text scoreText;
