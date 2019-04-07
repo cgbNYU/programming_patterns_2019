@@ -55,6 +55,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   Follower: {fileID: 148418061019398037, guid: 56b4170bbfcf3b44796350d4a630d0e2, type: 3}
-  Shooter: {fileID: 6241615052974639794, guid: 5fbe01c325054bb439165070af452cf7, type: 3}
+  Shooter: {fileID: 6241615052974639794, guid: fef3a8e6fd2d4dd489b4c1849a909a36, type: 3}
   Exploder: {fileID: 3409312479385481414, guid: 11b14a9deb78d664eaea73cdfacc1876,
     type: 3}
