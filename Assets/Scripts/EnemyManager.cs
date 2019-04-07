@@ -50,6 +50,7 @@ public class EnemyManager : MonoBehaviour
     private void Start()
     {
         EventManager.Instance.AddHandler<WaveStart>(OnWaveStart);
+        EventManager.Instance.AddHandler<EnemyDied>(EnemyDestroy);
     }
 
     private void OnDestroy()
@@ -111,10 +112,10 @@ public class EnemyManager : MonoBehaviour
     }
     
     //Call this method to destroy any enemies flagged for destruction and count down enemy total
-    public void EnemyDestroy(GameObject enemy)
+    public void EnemyDestroy(EnemyDied evt)
     {
-        enemies.Remove(enemy);
-        Destroy(enemy);
+        enemies.Remove(evt.Enemy);
+        Destroy(evt.Enemy);
         Debug.Log("Enemy destroyed!");
 
         if (enemies.Count <= 0)

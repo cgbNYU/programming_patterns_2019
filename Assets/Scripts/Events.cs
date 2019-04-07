@@ -22,10 +22,13 @@ public class Events : MonoBehaviour
     public class EnemyDied : GameEvent
     {
         public int PointValue { get; }
+        
+        public GameObject Enemy { get; }
     
-        public EnemyDied(int value)
+        public EnemyDied(int value, GameObject enemy)
         {
             PointValue = value;
+            Enemy = enemy;
         }
     }
     

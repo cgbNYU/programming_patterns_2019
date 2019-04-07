@@ -35,8 +35,7 @@ public class EnemyDestroy : MonoBehaviour
     {
         if (other.CompareTag(tagName))
         {
-            EventManager.Instance.Fire(new EnemyDied(pointValue)); //when an enemy is destroyed by a bullet, grant points
-            enemyManager.EnemyDestroy(gameObject);
+            EventManager.Instance.Fire(new EnemyDied(pointValue, gameObject)); //when an enemy is destroyed by a bullet, grant points
         }
     }
 }
