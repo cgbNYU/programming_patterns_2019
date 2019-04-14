@@ -15,6 +15,12 @@ public class GameManager : MonoBehaviour
     
     //UI
     public Text GameManagerText;
+
+    public void Init()
+    {
+        //Services.EventManager = new EventManager();
+        Services.EnemyManager = new EnemyManager();
+    }
     
     // Start is called before the first frame update
     void Awake()

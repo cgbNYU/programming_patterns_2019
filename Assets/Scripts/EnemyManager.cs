@@ -34,17 +34,6 @@ public class EnemyManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        //Singleton code
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-        }
-        
-        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
@@ -56,6 +45,7 @@ public class EnemyManager : MonoBehaviour
     private void OnDestroy()
     {
         EventManager.Instance.RemoveHandler<WaveStart>(OnWaveStart);
+        EventManager.Instance.RemoveHandler<EnemyDied>(EnemyDestroy);
     }
 
     private void OnWaveStart(WaveStart evt)
@@ -83,17 +73,17 @@ public class EnemyManager : MonoBehaviour
         //This should actually be an array than is pulled from with a random range
         if (whichEnemy == Enemies.Exploder)
         {
-            GameObject enemy = Instantiate(Exploder, spawnLoc.transform.position, spawnLoc.transform.rotation);
+            GameObject enemy = GameObject.Instantiate(Exploder, spawnLoc.transform.position, spawnLoc.transform.rotation);
             enemies.Add(enemy);
         }
         else if (whichEnemy == Enemies.Follower)
         {
-            GameObject enemy = Instantiate(Follower, spawnLoc.transform.position, spawnLoc.transform.rotation);
+            GameObject enemy = GameObject.Instantiate(Follower, spawnLoc.transform.position, spawnLoc.transform.rotation);
             enemies.Add(enemy);
         }
         else if (whichEnemy == Enemies.Shooter)
         {
-            GameObject enemy = Instantiate(Shooter, spawnLoc.transform.position, spawnLoc.transform.rotation);
+            GameObject enemy = GameObject.Instantiate(Shooter, spawnLoc.transform.position, spawnLoc.transform.rotation);
             enemies.Add(enemy);
         }
     }
@@ -115,7 +105,7 @@ public class EnemyManager : MonoBehaviour
     public void EnemyDestroy(EnemyDied evt)
     {
         enemies.Remove(evt.Enemy);
-        Destroy(evt.Enemy);
+        GameObject.Destroy(evt.Enemy);
         Debug.Log("Enemy destroyed!");
 
         if (enemies.Count <= 0)

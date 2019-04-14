@@ -6,7 +6,7 @@ using UnityEngine;
 public class Loader : MonoBehaviour
 {
 
-    public EnemyManager enemyManager;
+   /* public EnemyManager enemyManager;
     
     // Start is called before the first frame update
     void Awake()
@@ -15,5 +15,5 @@ public class Loader : MonoBehaviour
         {
             Instantiate(enemyManager);
         }
-    }
+    }*/
 }

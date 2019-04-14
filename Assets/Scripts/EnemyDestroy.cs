@@ -30,6 +30,11 @@ public class EnemyDestroy : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    private void OnEnemyDestroyed(EnemyDestroy evt)
+    {
+        
+    }
     
     private void OnTriggerEnter2D(Collider2D other)
     {

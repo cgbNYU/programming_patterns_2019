@@ -25,6 +25,10 @@ public class BTreeShooter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+        //Find player
+        _player = GameObject.Find("Player");
+        
         _tree = new Tree<BTreeShooter>(new Selector<BTreeShooter>(
             //Enemy prioritizes shooting a burst at player if it is close enough and health is low
             new Sequence<BTreeShooter>(

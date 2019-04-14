@@ -22,7 +22,7 @@ public class EventManager
     private static readonly EventManager _instance = new EventManager();
     public static EventManager Instance => _instance;
 
-    private EventManager() {}
+    public EventManager() {}
 
     //When a piece of code needs to read an event, it adds a handler here.
     public void AddHandler<T> (EventDelegate<T> del) where T : GameEvent
